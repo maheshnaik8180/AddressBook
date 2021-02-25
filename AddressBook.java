@@ -1,33 +1,42 @@
 public class AddressBook {
-	private String fname = "";
-	private String lname = "";
-	private String address = "";
-	private String city = "";
-	private String state = "";
-	private String zip = "";
-	private String mob_no = "";
-	private String email = "";
 
-	public AddressBook(String fname, String lname, String address, String city,String state, String zip,
-			String mob_no, String email) {
-			this.fname = fname;
-			this.lname = lname;
-			this.address = address;
-			this.zip = zip;
-			this.city = city;
-			this.state = state;
-			this.mob_no = mob_no;
-			this.email = email;
+
+	public String firstName;
+	public String lastName;
+	public String address;
+	public String city;
+	public String state;
+	public int zipCode;
+	public String phoneNumber;
+	public String email;
+
+	//Constructor
+	public AddressBook(String firstName, String lastName, String address, String city, 
+			String state, int zipCode, String phoneNumber, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
 	}
 
-	public String toString() {
-        return "Contact created:\nName: " + fname+" " + lname+"\nAddress: " + address+"\nCity: " +city+"\nState: " +state+
-        		"\nZip Code: " +zip +"\nMobile: " +mob_no +"\nEmail: " +email;
-    }
-
 	public static void main(String[] args) {
-		System.out.println("Welcome to the AddressBook program.");
-		
+		System.out.println("***Welcome to Address Book Program***");
+
+		AddressBook makeEntry = new AddressBook("Mahesh", "Naik", "gadhinglaj", "kolhapur", 
+				"Maharashtra", 416502, "457812787", "naikmahesh.naik@gmail.com");
+		System.out.println("First name: " + makeEntry.firstName);
+		System.out.println("Last name: " + makeEntry.lastName);
+		System.out.println("Address: " + makeEntry.address);
+		System.out.println("City: " + makeEntry.city);
+		System.out.println("State: " + makeEntry.state);
+		System.out.println("Zip code: " + makeEntry.zipCode);
+		System.out.println("Phone number: " + makeEntry.phoneNumber);
+		System.out.println("Email: " + makeEntry.email);
+
 	}
 
 }
